@@ -1,0 +1,24 @@
+<div class="sidebar-panel offscreen-left">
+    <div class="brand">
+        <div class="brand-logo">
+            <h5 class="text-muted">OMKAdmin</h5>
+        </div>
+        <a href="javascript:;" class="toggle-sidebar hidden-xs hamburger-icon v3" data-toggle="layout-small-menu">
+            <span></span> <span></span> <span></span> <span></span>
+        </a>
+    </div>
+    <nav role="navigation">
+        <ul class="nav">
+            {{# nav}}
+                <li {{#_equal link ../current_link}}
+                        class="active"
+                    {{/_equal}}>
+                    <a href="{{link}}">
+                        <i class="fa {{class}}"></i>
+                        <span>{{name}}</span>
+                    </a>
+                </li>
+            {{/nav}}
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,47 @@
+
+<div class="app layout-fixed-header">
+    {{> sidebar}}
+    <div class=main-panel>
+        {{> navbar}}
+        <div class=main-content>
+            <div class=panel>
+                <div class="panel-heading border">
+                    <ol class="breadcrumb mb0 no-padding">
+                        <li><a href=javascript:;>Home</a></li>
+                        <li><a href=javascript:;>Tables</a></li>
+                        <li class=active>Data tables</li>
+                    </ol>
+                </div>
+                <div class=panel-body>
+                    <table class="table table-bordered table-striped datatable editable-datatable responsive align-middle bordered">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>邮箱</th>
+                                <th>手机</th>
+                                <th>创建时间</th>
+                                <th>编辑</th>
+                                <th>删除</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#table_rows}}
+                                <tr>
+                                    <td>{{name}}</td>
+                                    <td>{{email}}</td>
+                                    <td>{{mobile}}</td>
+                                    <td>{{_date create_time}}</td>
+                                    <td><a href=javascript:; class=edit>Edit</a>
+                                    <td><a href=javascript:; class=delete>Delete</a>
+                                </tr>
+                            {{/table_rows}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
+
+{{> table_foot}}

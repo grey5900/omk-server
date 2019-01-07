@@ -1,0 +1,49 @@
+
+<div class="app layout-fixed-header">
+    {{> sidebar}}
+    <div class=main-panel>
+        {{> navbar}}
+        <div class=main-content>
+            <div class=panel>
+                <div class="panel-heading border">
+                    <ol class="breadcrumb mb0 no-padding">
+                        <li><a href=javascript:;>Home</a></li>
+                        <li><a href=javascript:;>Tables</a></li>
+                        <li class=active>Data tables</li>
+                    </ol>
+                </div>
+                <div class=panel-body>
+                    <table class="table table-bordered table-striped datatable editable-datatable responsive align-middle bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>用户</th>
+                                <th>缩略图</th>
+                                <th>本图</th>
+                                <th>创建时间</th>
+                                <th>编辑</th>
+                                <th>删除</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#table_rows}}
+                                <tr>
+                                    <td>{{_id}}</td>
+                                    <td>{{user}}</td>
+                                    <td><img src="{{thumbnail}}" width="88" height="88"></td>
+                                    <td>{{image}}</td>
+                                    <td>{{_date create_time}}</td>
+                                    <td><a href=javascript:; class=edit>Edit</a>
+                                    <td><a href=javascript:; class=delete>Delete</a>
+                                </tr>
+                            {{/table_rows}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
+
+{{> table_foot}}
